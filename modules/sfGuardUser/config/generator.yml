@@ -1,8 +1,8 @@
 generator:
-  class: sfPropelGenerator
+  class: IcePropelGenerator
   param:
     model_class:           sfGuardUser
-    theme:                 admin
+    theme:                 bootstrap
     non_verbose_templates: true
     with_show:             false
     singular:              ~
@@ -13,6 +13,7 @@ generator:
     config:
       fields:
         password_again: { label: "Password (again)" }
+        username: { label: "Email" }
 
       list:
         title:   User list
@@ -26,6 +27,9 @@ generator:
 
       edit:
         title: Editing User "%%username%%"
+
+      filter:
+        display: [username, is_active]
 
       new:
         title: New User
