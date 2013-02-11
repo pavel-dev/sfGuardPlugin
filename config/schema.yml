@@ -47,3 +47,4 @@ propel:
     remember_key:   { type: varchar, size: 32 }
     ip_address:     { type: varchar, size: 50, primaryKey: true }
     created_at:     ~
+
